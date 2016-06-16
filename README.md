@@ -6,8 +6,14 @@ Bangalore Metropolitan Transport Corporation BMTC recently released its Intellig
 API Reference : https://github.com/tachyons/bmtc_api
 
 ## Installation
+First enable php-curl extension in apache.
 
-Add this line to the top of your php application
+If you are in ubuntu 16.04, type
+```bash
+sudo apt-get install php-curl
+```
+
+Then add this line to the top of your php application
 
 ```php
 require 'bmct.php';
@@ -21,40 +27,32 @@ Create a new instance.
 $bmct = new Bmct();
 ```
 
-Nearest bustop.
+Route wise details.
 
 ```php
-$bmct->();
+$result = $bmct->route_wise('direction', '<routeNo>');
 ```
 
-Buses in a stop.
+Route map details.
 ```php
-$bmct->();
+$result = $bmct->route_map('<direction>', '<routeNo>');
 ```
-Get ttmc list
-
-```php
-$bmct->();
-```
-Get route map
+Nearest stop details.
 
 ```php
-$bmct->();
+$result = $bmct->nearest_stop('<lattitude>', '<longitude>');
 ```
-
-Get Trip fare
+Get stops matching the query string.
 
 ```php
-$bmct->();
+$result = $bmct->search_stop('<keyword>');
 ```
+Get stop details based on Stop ID.
 
-Service types can be either
-* oridninary
-* vajra
-* vayu_vajra
-* atal_sarige
-* nice_service
-* bengaluru_darshini
+```php
+$result = $bmct->stop_details('<stopId>');
+```
+Note: Every methods described above either returns an array of objects or a NULL array.
 
 ## Contributing
 
@@ -67,5 +65,4 @@ This repository is available as open source under the terms of the [MIT License]
 
 ## Demo
 
-A demo php application, built based on this api can be found in the demo folder.    
-http:///demo.php
+@TODO
