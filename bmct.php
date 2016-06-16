@@ -6,7 +6,7 @@ class Bmct{
 
   }
 
-	public function route_wise($direction, $route_no){
+  public function route_wise($direction, $route_no){
     $url = $this->root_url.'/itsroutewise/details';
 
     $ch = curl_init();
@@ -26,7 +26,7 @@ class Bmct{
     }
   }
 
-	public function route_map($direction, $route_no){
+  public function route_map($direction, $route_no){
     $url = $this->root_url.'/routemap/details';
 
     $ch = curl_init();
