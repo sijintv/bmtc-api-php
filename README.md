@@ -1,7 +1,7 @@
 # PHP Wraper for BMTC API
 
 
-Bangalore Metropolitan Transport Corporation BMTC recently released its Intelligent Transport System (ITS) , But as of now there is no official public api available. This is an approch to build a php wraper based on the Reverse engineering work done by [**Aboobacker MK.**](https://github.com/tachyons)
+Bangalore Metropolitan Transport Corporation BMTC recently released its Intelligent Transport System (ITS) , But as of now there is no official public api available. This is an approach to build a php wrapper based on the Reverse engineering work done by [**Aboobacker MK.**](https://github.com/tachyons)
 
 API Reference : https://github.com/tachyons/bmtc_api
 
