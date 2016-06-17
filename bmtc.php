@@ -1,5 +1,5 @@
 <?php
-class Bmct{
+class Bmtc{
   private $root_url = 'http://bmtcmob.hostg.in/api';
 
   public function __construct(){

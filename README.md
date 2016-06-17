@@ -16,7 +16,7 @@ sudo apt-get install php-curl
 Then add this line to the top of your php application
 
 ```php
-require 'bmct.php';
+require 'bmtc.php';
 ```
 
 ## Usage
@@ -24,33 +24,33 @@ require 'bmct.php';
 Create a new instance.
 
 ```php
-$bmct = new Bmct();
+$bmtc = new Bmtc();
 ```
 
 Route wise details.
 
 ```php
-$result = $bmct->route_wise('direction', '<routeNo>');
+$result = $bmtc->route_wise('direction', '<routeNo>');
 ```
 
 Route map details.
 ```php
-$result = $bmct->route_map('<direction>', '<routeNo>');
+$result = $bmtc->route_map('<direction>', '<routeNo>');
 ```
 Nearest stop details.
 
 ```php
-$result = $bmct->nearest_stop('<lattitude>', '<longitude>');
+$result = $bmtc->nearest_stop('<lattitude>', '<longitude>');
 ```
 Get stops matching the query string.
 
 ```php
-$result = $bmct->search_stop('<keyword>');
+$result = $bmtc->search_stop('<keyword>');
 ```
 Get stop details based on Stop ID.
 
 ```php
-$result = $bmct->stop_details('<stopId>');
+$result = $bmtc->stop_details('<stopId>');
 ```
 Note: Every methods described above either returns an array of objects or a NULL array.
 
