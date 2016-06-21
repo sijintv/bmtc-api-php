@@ -1,4 +1,4 @@
-# PHP Wraper for BMTC API
+# PHP Wrapper for BMTC API
 
 
 Bangalore Metropolitan Transport Corporation BMTC recently released its Intelligent Transport System (ITS) , But as of now there is no official public api available. This is an approach to build a php wrapper based on the Reverse engineering work done by [**tachyons**](https://github.com/tachyons)
@@ -30,7 +30,7 @@ $bmtc = new Bmtc();
 Route wise details.
 
 ```php
-$result = $bmtc->route_wise('direction', '<routeNo>');
+$result = $bmtc->route_wise('<direction>', '<routeNo>');
 ```
 
 Route map details.
