@@ -98,5 +98,24 @@ class Bmtc{
     }
   }
 
+  public function trip_fare($source, $destination, $adults_no, $service_type){
+    $url = $this->root_url.'/tripfare/details';
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS,"stopID=$stop_id&destination=$destination&serviceType=$service_type&source=$source");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $server_output = curl_exec ($ch);
+    $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close ($ch);
+    if ($server_output && $httpcode = '200') {
+      return json_decode($server_output);
+    }
+    else {
+      return;
+    }
+  }
+
 }
 ?>
