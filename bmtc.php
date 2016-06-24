@@ -98,13 +98,13 @@ class Bmtc{
     }
   }
 
-  public function trip_fare($source, $destination, $adults_no, $service_type){
+  public function trip_fare($source, $destination, $service_type, $adults_no){
     $url = $this->root_url.'/tripfare/details';
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS,"stopID=$stop_id&destination=$destination&serviceType=$service_type&source=$source");
+    curl_setopt($ch, CURLOPT_POSTFIELDS,"source=$source&destination=$destination&serviceType=$service_type&adults=$adults_no");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $server_output = curl_exec ($ch);
     $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
