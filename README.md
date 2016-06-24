@@ -52,6 +52,19 @@ Get stop details based on Stop ID.
 ```php
 $result = $bmtc->stop_details('<stopId>');
 ```
+Get a trip fare.
+
+```php
+$result = $bmtc->trip_fare(<source>, <destination>, <service types>, <number of adults>);
+```
+Service types can be either
+* ordinary
+* vajra
+* vayu_vajra
+* atal_sarige
+* nice_service
+* bengaluru_darshini
+
 Note: Every methods described above either returns an array of objects or a NULL array.
 
 ## Contributing
